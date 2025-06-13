@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://31xkg7fh5p7j"]
+
+[ext_resource type="PackedScene" uid="uid://crfhb0jbbqc78" path="res://Scenes/scene_handlers.tscn" id="1_b5ayd"]
+[ext_resource type="PackedScene" uid="uid://cpdko5gvtch4p" path="res://Scenes/Player.tscn" id="2_5lt6y"]
+[ext_resource type="PackedScene" uid="uid://ckhonoru1lr30" path="res://Scenes/GUI.tscn" id="3_8k7wh"]
+[ext_resource type="Script" uid="uid://dmmp5leud82lw" path="res://Scripts/Characters/CloneCreator.gd" id="4_iufkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5ayd"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="SceneHandlers" parent="." instance=ExtResource("1_b5ayd")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_5lt6y")]
+MOVE_SPEED = 250.0
+JUMP_VELOCITY = -400.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 209)
+scale = Vector2(49.1748, 3.79475)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_b5ayd")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0.427451, 0.45098, 0.454902, 1)
+
+[node name="GUI" parent="." instance=ExtResource("3_8k7wh")]
+
+[node name="ClonePosition" type="Node2D" parent="."]
+script = ExtResource("4_iufkg")

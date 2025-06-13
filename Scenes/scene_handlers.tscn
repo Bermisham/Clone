@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://crfhb0jbbqc78"]
+
+[ext_resource type="Script" uid="uid://c05ltwy7i1jks" path="res://Scripts/SceneHandlers/SceneHandler.gd" id="1_5ydjq"]
+[ext_resource type="Script" uid="uid://djv0qkppmx3qd" path="res://Scripts/SceneHandlers/ModeHandler.gd" id="2_781tb"]
+[ext_resource type="Script" uid="uid://cpk0kg37ljpjd" path="res://Scripts/SceneHandlers/InputSaveHandler.gd" id="3_64vys"]
+
+[node name="SceneHandlers" type="Node"]
+script = ExtResource("1_5ydjq")
+
+[node name="Mode" type="Node" parent="."]
+script = ExtResource("2_781tb")
+
+[node name="InputSave" type="Node" parent="."]
+script = ExtResource("3_64vys")
+amtSaves = 5
+
+[connection signal="mode_change" from="Mode" to="." method="_on_mode_change"]
