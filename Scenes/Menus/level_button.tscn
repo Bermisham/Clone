@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqbkybwlsbsky"]
+
+[ext_resource type="Script" uid="uid://bs7bdphm66q0f" path="res://Scripts/GUI/LevelButton.gd" id="1_miuhf"]
+
+[node name="LevelButton" type="Button"]
+custom_minimum_size = Vector2(0, 100)
+offset_right = 102.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 6
+theme_override_font_sizes/font_size = 32
+text = "NAME"
+script = ExtResource("1_miuhf")

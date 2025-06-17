@@ -6,13 +6,13 @@ var sceneHandler : Node = null
 var player : CharacterBody2D = null
 var cloner : Node2D = null
 
-func SetSceneHandler(handler : Node):
+func SetSceneHandler(handler : Node) -> void:
 	sceneHandler = handler
 	
-func SetPlayer(ply : CharacterBody2D):
+func SetPlayer(ply : CharacterBody2D) -> void:
 	player = ply
 
-func SetCloner(cln : Node2D):
+func SetCloner(cln : Node2D) -> void:
 	cloner = cln
 	
 func ChangePause(state : bool) -> void:

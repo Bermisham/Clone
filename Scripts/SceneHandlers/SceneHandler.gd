@@ -1,22 +1,26 @@
 extends Node
 
 @onready var input_save: Node = $InputSave
+@onready var mode: Node = $Mode
 
 var paused := false
 
 func _ready() -> void:
 	GlobalHandler.SetSceneHandler(self)
+	GlobalHandler.pause_changed.connect(_pauseChange)
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
 		togglePause()
 	elif !paused and event.is_action_pressed("make_clone") and input_save.currentState != 1:
-		if input_save.currentSave:
-			GlobalHandler.cloner.CreateClone(input_save.GetCurrentInputSave())
+		GlobalHandler.cloner.CreateClone(input_save.GetCurrentInputSave(), mode.IsVisual())
 
 func togglePause() -> void:
 	paused = !paused
 	GlobalHandler.ChangePause(paused)
+	
+func _pauseChange(state : bool) -> void:
+	paused = state
 
-func _on_mode_change(mode: int) -> void:
-	input_save.ModeChange(mode)
+func _on_mode_change(modeSet: int) -> void:
+	input_save.ModeChange(modeSet)

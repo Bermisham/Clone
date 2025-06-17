@@ -11,8 +11,16 @@ var inputSaves : Array = []
 var currentSave : int = 0
 
 func _ready() -> void:
-	GlobalHandler.pause_changed.connect(_ChangePause)
 	SetSaveAmount(amtSaves)
+	
+	# Pause Handling
+	GlobalHandler.pause_changed.connect(func(state:bool):
+		if state == false:
+			currentState = lastState as State
+		else:
+			lastState = currentState as State
+			currentState = State.PAUSED
+		)
 
 ## Handle save related inputs
 func _unhandled_key_input(event: InputEvent) -> void:
@@ -48,7 +56,6 @@ func SetSaveAmount(amt : int) -> void:
 		inputSaves.resize(amt)
 		if currentSave > amt:
 			currentSave = amt
-	
 
 ## Clears existing saved data and sets state to recording
 func StartRecording() -> void:
@@ -61,14 +68,6 @@ func GetCurrentInputSave() -> Array:
 	return inputSaves[currentSave]
 func GetAllInputSaves() -> Array:
 	return inputSaves
-
-## Handle pausing
-func _ChangePause(state: bool) -> void:
-	if state == false:
-		currentState = lastState as State
-	else:
-		lastState = currentSave as State
-		currentState = State.PAUSED
 
 ## Handle recording states for mode changes
 func ModeChange(mode):

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b7ig70b5bsf7l"]
+
+[ext_resource type="Script" uid="uid://cxcjuuqxw2l0n" path="res://Scripts/CameraHandler.gd" id="1_375tr"]
+
+[node name="Camera2D" type="Camera2D"]
+script = ExtResource("1_375tr")
+smoothing = true

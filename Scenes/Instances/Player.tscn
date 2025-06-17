@@ -6,7 +6,6 @@
 size = Vector2(40, 40)
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 0
 script = ExtResource("1_rpqav")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

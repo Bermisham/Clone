@@ -1,0 +1,118 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckhonoru1lr30"]
+
+[ext_resource type="Script" uid="uid://ccbhuab2udoxi" path="res://Scripts/GUI/GUIHandler.gd" id="1_bpa6r"]
+[ext_resource type="Script" uid="uid://bnhepvigy3lgy" path="res://Scripts/GUI/HUDHandler.gd" id="2_amv3e"]
+[ext_resource type="Script" uid="uid://du6r84g6vxhun" path="res://Scripts/GUI/PauseMenu.gd" id="3_xt740"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InGameUI" type="CanvasLayer" parent="."]
+script = ExtResource("1_bpa6r")
+
+[node name="HUD" type="Control" parent="InGameUI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_amv3e")
+
+[node name="ModeLabel" type="Label" parent="InGameUI/HUD"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 614.0
+offset_right = 51.0
+offset_bottom = 637.0
+text = "?"
+
+[node name="SaveLabel" type="Label" parent="InGameUI/HUD"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 53.0
+offset_bottom = 34.0
+text = "?"
+
+[node name="PauseScreen" type="Control" parent="InGameUI"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("3_xt740")
+
+[node name="ColorRect" type="ColorRect" parent="InGameUI/PauseScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0693, 0.0693, 0.11, 0.270588)
+
+[node name="CenterContainer" type="CenterContainer" parent="InGameUI/PauseScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="InGameUI/PauseScreen/CenterContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+color = Color(0.0666667, 0.0666667, 0.105882, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="InGameUI/PauseScreen/CenterContainer/ColorRect2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InGameUI/PauseScreen/CenterContainer/ColorRect2/CenterContainer"]
+custom_minimum_size = Vector2(150, 250)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="InGameUI/PauseScreen/CenterContainer/ColorRect2/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="InGameUI/PauseScreen/CenterContainer/ColorRect2/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "RESUME"
+
+[node name="LevelsButton" type="Button" parent="InGameUI/PauseScreen/CenterContainer/ColorRect2/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "LEVELS"
+
+[node name="TitleButton" type="Button" parent="InGameUI/PauseScreen/CenterContainer/ColorRect2/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "TITLE"
+
+[node name="QuitButton" type="Button" parent="InGameUI/PauseScreen/CenterContainer/ColorRect2/CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+text = "QUIT"
+
+[connection signal="pressed" from="InGameUI/PauseScreen/CenterContainer/ColorRect2/CenterContainer/VBoxContainer/ResumeButton" to="InGameUI/PauseScreen" method="_on_resume"]
+[connection signal="pressed" from="InGameUI/PauseScreen/CenterContainer/ColorRect2/CenterContainer/VBoxContainer/LevelsButton" to="InGameUI/PauseScreen" method="_on_levels"]
+[connection signal="pressed" from="InGameUI/PauseScreen/CenterContainer/ColorRect2/CenterContainer/VBoxContainer/TitleButton" to="InGameUI/PauseScreen" method="_on_title"]
+[connection signal="pressed" from="InGameUI/PauseScreen/CenterContainer/ColorRect2/CenterContainer/VBoxContainer/QuitButton" to="InGameUI/PauseScreen" method="_on_quit"]

@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://31xkg7fh5p7j"]
+
+[ext_resource type="PackedScene" uid="uid://b7ig70b5bsf7l" path="res://Scenes/Instances/camera.tscn" id="1_nl11p"]
+[ext_resource type="PackedScene" uid="uid://crfhb0jbbqc78" path="res://Scenes/Instances/scene_handlers.tscn" id="2_ls13u"]
+[ext_resource type="PackedScene" uid="uid://cpdko5gvtch4p" path="res://Scenes/Instances/Player.tscn" id="3_qlce4"]
+[ext_resource type="PackedScene" uid="uid://ckhonoru1lr30" path="res://Scenes/Instances/GUI.tscn" id="4_p0q3u"]
+[ext_resource type="Script" uid="uid://dmmp5leud82lw" path="res://Scripts/Characters/CloneCreator.gd" id="5_tfhh4"]
+[ext_resource type="PackedScene" uid="uid://chk6l3as5ijwi" path="res://Scenes/Instances/recording_cancel_area.tscn" id="6_jnui4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5ayd"]
+
+[node name="TestScene" type="Node2D"]
+
+[node name="Camera2D" parent="." node_paths=PackedStringArray("player") instance=ExtResource("1_nl11p")]
+position = Vector2(0, 151)
+player = NodePath("../CharacterBody2D")
+
+[node name="SceneHandlers" parent="." instance=ExtResource("2_ls13u")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_qlce4")]
+position = Vector2(0, 151)
+MOVE_SPEED = 250.0
+JUMP_VELOCITY = -400.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 209)
+scale = Vector2(49.1748, 3.79475)
+collision_layer = 15
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_b5ayd")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0.427451, 0.45098, 0.454902, 1)
+
+[node name="GUI" parent="." instance=ExtResource("4_p0q3u")]
+
+[node name="ClonePosition" type="Node2D" parent="."]
+script = ExtResource("5_tfhh4")
+
+[node name="RecordingCancelArea" parent="." instance=ExtResource("6_jnui4")]
+position = Vector2(309, 80)
+scale = Vector2(5.6792, 4.52592)
