@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://btb62ujlxwhjc"]
+
+[ext_resource type="Texture2D" uid="uid://bos1mdgsqgfap" path="res://Sprites/FeedbackLoop-NoRecord.png" id="1_uwi1r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_uwi1r"]
+texture = ExtResource("1_uwi1r")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+3:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_mlfjm"]
+sources/0 = SubResource("TileSetAtlasSource_uwi1r")
+
+[node name="TileMapLayer" type="TileMapLayer"]
+texture_filter = 1
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_mlfjm")

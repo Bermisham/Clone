@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://u4x060odkhk8"]
+
+[ext_resource type="Script" uid="uid://dmmp5leud82lw" path="res://Scripts/Characters/CloneCreator.gd" id="1_so46d"]
+
+[node name="CloneNode" type="Node2D"]
+script = ExtResource("1_so46d")

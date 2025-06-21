@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cx4a737jq88mw"]
+[gd_scene load_steps=4 format=3 uid="uid://cx4a737jq88mw"]
 
 [ext_resource type="Script" uid="uid://cgx6kqfcvsu8r" path="res://Scripts/GUI/LevelSelect.gd" id="1_4o7q4"]
+[ext_resource type="Theme" uid="uid://52q2djqhq2lm" path="res://btnTheme.tres" id="2_ly1v0"]
+[ext_resource type="FontFile" uid="uid://b3qdsvlys0nie" path="res://Font/Hack/HackNerdFont-Bold.ttf" id="3_to7mc"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -37,12 +39,16 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="TitleButton" type="Button" parent="."]
+texture_filter = 1
 layout_mode = 0
 offset_left = 17.0
 offset_top = 16.0
 offset_right = 106.0
 offset_bottom = 69.0
+theme = ExtResource("2_ly1v0")
+theme_override_fonts/font = ExtResource("3_to7mc")
 theme_override_font_sizes/font_size = 32
 text = "Title"
+flat = true
 
 [connection signal="pressed" from="TitleButton" to="." method="_on_title"]

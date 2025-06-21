@@ -11,3 +11,6 @@ func _on_quit() -> void:
 
 func _on_title() -> void:
 	SceneLoader.setScene("res://Scenes/Menus/Title.tscn")
+
+func _on_restart() -> void:
+	SceneLoader.setScene(get_tree().current_scene.scene_file_path)

@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://52q2djqhq2lm"]
+
+[ext_resource type="FontFile" uid="uid://c6dqx0n3h2gdb" path="res://Font/Hack/HackNerdFont-Regular.ttf" id="1_op0md"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_op0md"]
+bg_color = Color(0.0693, 0.0693, 0.11, 0)
+border_width_bottom = 1
+border_color = Color(0.454902, 0.780392, 0.92549, 1)
+
+[resource]
+Button/colors/font_color = Color(0.803922, 0.839216, 0.956863, 1)
+Button/colors/font_focus_color = Color(0.454902, 0.780392, 0.92549, 1)
+Button/colors/font_hover_color = Color(0.454902, 0.780392, 0.92549, 1)
+Button/colors/font_hover_pressed_color = Color(0.980392, 0.701961, 0.529412, 1)
+Button/colors/font_pressed_color = Color(0.980392, 0.701961, 0.529412, 1)
+Button/fonts/font = ExtResource("1_op0md")
+Button/styles/focus = SubResource("StyleBoxFlat_op0md")

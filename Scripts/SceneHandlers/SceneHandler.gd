@@ -3,6 +3,8 @@ extends Node
 @onready var input_save: Node = $InputSave
 @onready var mode: Node = $Mode
 
+signal clone_made()
+
 var paused := false
 
 func _ready() -> void:
@@ -14,6 +16,7 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		togglePause()
 	elif !paused and event.is_action_pressed("make_clone") and input_save.currentState != 1:
 		GlobalHandler.cloner.CreateClone(input_save.GetCurrentInputSave(), mode.IsVisual())
+		clone_made.emit()
 
 func togglePause() -> void:
 	paused = !paused

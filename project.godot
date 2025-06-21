@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Feedback Loop"
-run/main_scene="uid://31xkg7fh5p7j"
+run/main_scene="uid://snxgw3anrh1u"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -102,3 +102,7 @@ make_clone={
 2d_physics/layer_2="CloneCollision"
 2d_physics/layer_3="VisualCloneCollision"
 2d_physics/layer_4="CloneInteract"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.0941176, 0.0941176, 0.145098, 1)

@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://gqxhfgs3bb4n"]
+[gd_scene load_steps=4 format=3 uid="uid://gqxhfgs3bb4n"]
 
 [ext_resource type="Script" uid="uid://u6jmea0rbbar" path="res://Scripts/Characters/CloneHandler.gd" id="1_2iemh"]
+[ext_resource type="Texture2D" uid="uid://udfmgsrro2im" path="res://Sprites/FeedbackLoop-Character.png" id="2_8qj45"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tov7w"]
-size = Vector2(40, 40)
+size = Vector2(32, 32)
 
 [node name="Clone" type="CharacterBody2D"]
+z_index = 4
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("1_2iemh")
@@ -13,16 +15,9 @@ script = ExtResource("1_2iemh")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_tov7w")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(1, 0.74902, 1, 1)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_8qj45")
+hframes = 6
+frame = 4

@@ -12,6 +12,6 @@ script = ExtResource("2_781tb")
 
 [node name="InputSave" type="Node" parent="."]
 script = ExtResource("3_64vys")
-amtSaves = 5
+amtSaves = 3
 
 [connection signal="mode_change" from="Mode" to="." method="_on_mode_change"]

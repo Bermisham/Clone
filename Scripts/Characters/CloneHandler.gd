@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var color_rect: ColorRect = $ColorRect
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 var MOVE_SPEED : float
 var JUMP_VELOCITY : float
@@ -14,17 +14,17 @@ var paused := false
 
 # Initiate Clone Values
 func SetCloneValues(mvSpeed : float, jpVelocity : float, moveArr : Array, visual : bool) -> void:
+	print("NEW CLONE")
 	MOVE_SPEED = mvSpeed
 	JUMP_VELOCITY = jpVelocity
 	movementArray = moveArr
 	GlobalHandler.pause_changed.connect(func(state:bool): paused = state)
 	
 	if visual:
-		color_rect.color = Color("#ffbfff", 0.65)
+		sprite_2d.frame = 5
 		set_collision_mask_value(3, true)
 		set_collision_mask_value(2, false)
 	else:
-		color_rect.color = Color("#ffbfff")
 		set_collision_layer_value(4, true)
 
 func _physics_process(delta: float) -> void:

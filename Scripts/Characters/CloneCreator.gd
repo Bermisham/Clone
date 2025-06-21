@@ -8,6 +8,6 @@ func _ready() -> void:
 func CreateClone(moveArray : Array, visual : bool = false) -> void:
 	var player = GlobalHandler.player
 	var newClone = clone.instantiate()
-	get_tree().get_root().add_child(newClone)
+	get_parent().add_child(newClone)
 	newClone.global_position = player.global_position
 	newClone.SetCloneValues(player.MOVE_SPEED, player.JUMP_VELOCITY, moveArray, visual)

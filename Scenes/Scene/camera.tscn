@@ -3,5 +3,6 @@
 [ext_resource type="Script" uid="uid://cxcjuuqxw2l0n" path="res://Scripts/CameraHandler.gd" id="1_375tr"]
 
 [node name="Camera2D" type="Camera2D"]
+zoom = Vector2(1.5, 1.5)
 script = ExtResource("1_375tr")
 smoothing = true

@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnvldkmar2hkh"]
+
+[ext_resource type="Script" uid="uid://bhauxaj8sam22" path="res://Scripts/Objects/Door.gd" id="1_562ge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_562ge"]
+size = Vector2(16, 16)
+
+[node name="Door" type="Node2D"]
+script = ExtResource("1_562ge")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(8, 8)
+shape = SubResource("RectangleShape2D_562ge")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.653408, 0.89, 0.6319, 0.635294)

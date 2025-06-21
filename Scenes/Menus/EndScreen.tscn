@@ -1,18 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://snxgw3anrh1u"]
+[gd_scene load_steps=4 format=3 uid="uid://bsyjwpt4s5ow6"]
 
-[ext_resource type="Script" uid="uid://cas3rkd6khymk" path="res://Scripts/GUI/Title.gd" id="1_ho2th"]
-[ext_resource type="FontFile" uid="uid://b3qdsvlys0nie" path="res://Font/Hack/HackNerdFont-Bold.ttf" id="2_ab4mj"]
-[ext_resource type="FontFile" uid="uid://c6dqx0n3h2gdb" path="res://Font/Hack/HackNerdFont-Regular.ttf" id="3_2g6n3"]
-[ext_resource type="Theme" uid="uid://52q2djqhq2lm" path="res://btnTheme.tres" id="3_fnpp3"]
+[ext_resource type="Script" uid="uid://qs88qyjebnlf" path="res://Scripts/GUI/EndScreen.gd" id="1_g1lhe"]
+[ext_resource type="FontFile" uid="uid://b3qdsvlys0nie" path="res://Font/Hack/HackNerdFont-Bold.ttf" id="2_uu60e"]
+[ext_resource type="Theme" uid="uid://52q2djqhq2lm" path="res://btnTheme.tres" id="2_xfuas"]
 
-[node name="Title" type="Control"]
+[node name="EndScreen" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ho2th")
+script = ExtResource("1_g1lhe")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -39,38 +38,38 @@ texture_filter = 1
 custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.796078, 0.65098, 0.968627, 1)
-theme_override_fonts/font = ExtResource("2_ab4mj")
+theme_override_fonts/font = ExtResource("2_uu60e")
 theme_override_font_sizes/font_size = 128
-text = "Title"
+text = "End"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PlayButton" type="Button" parent="CenterContainer/VBoxContainer"]
+[node name="TitleButton" type="Button" parent="CenterContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("3_fnpp3")
-theme_override_fonts/font = ExtResource("3_2g6n3")
-theme_override_font_sizes/font_size = 64
-text = "Play"
+theme = ExtResource("2_xfuas")
+theme_override_font_sizes/font_size = 32
+text = "Title"
 flat = true
 
 [node name="LevelsButton" type="Button" parent="CenterContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("3_fnpp3")
+theme = ExtResource("2_xfuas")
 theme_override_font_sizes/font_size = 32
-text = "Levels"
+text = "Levels
+"
 flat = true
 
 [node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("3_fnpp3")
+theme = ExtResource("2_xfuas")
 theme_override_font_sizes/font_size = 32
 text = "Quit
 "
 flat = true
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/PlayButton" to="." method="_on_play"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/TitleButton" to="." method="_on_title"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/LevelsButton" to="." method="_on_levels"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/QuitButton" to="." method="_on_quit"]
