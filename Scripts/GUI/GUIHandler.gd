@@ -38,7 +38,8 @@ func _pause(state : bool) -> void:
 			pause_screen.hide()
 
 func _SceneComplete() -> void:
-	time.text = "TIME [" + str("%0.2f" % gameTime) + "]"
+	time.text = "Time [" + str("%0.2f" % gameTime) + "]"
 	sceneComplete = true
 	complete_screen.show()
 	GlobalHandler.ChangePause(true)
+	GlobalHandler.sceneHandler.endScene()

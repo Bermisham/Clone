@@ -390,6 +390,7 @@ position = Vector2(-140, 507)
 
 [node name="Camera2D" parent="." instance=ExtResource("3_qpfou")]
 position = Vector2(-140, 507)
+zoom = Vector2(2.5, 2.5)
 
 [node name="GUI" parent="." instance=ExtResource("5_ybqp2")]
 offset_left = 831.0

@@ -6,6 +6,7 @@ extends Node
 signal clone_made()
 
 var paused := false
+var sceneEnd := false
 
 func _ready() -> void:
 	GlobalHandler.SetSceneHandler(self)
@@ -18,9 +19,13 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		GlobalHandler.cloner.CreateClone(input_save.GetCurrentInputSave(), mode.IsVisual())
 		clone_made.emit()
 
+func endScene() -> void:
+	sceneEnd = true
+
 func togglePause() -> void:
-	paused = !paused
-	GlobalHandler.ChangePause(paused)
+	if !sceneEnd:
+		paused = !paused
+		GlobalHandler.ChangePause(paused)
 	
 func _pauseChange(state : bool) -> void:
 	paused = state
