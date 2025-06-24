@@ -1,14 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkq61amvbtco8"]
+[gd_scene load_steps=4 format=3 uid="uid://dm5qf2k4xulbx"]
 
-[ext_resource type="Script" uid="uid://ov527i86gsxv" path="res://Scripts/Objects/button.gd" id="1_js00g"]
-[ext_resource type="Texture2D" uid="uid://b777jvivrusqo" path="res://Sprites/FeedbackLoop-Button.png" id="2_5rgrt"]
+[ext_resource type="Script" uid="uid://ov527i86gsxv" path="res://Scripts/Objects/button.gd" id="1_n4tde"]
+[ext_resource type="Texture2D" uid="uid://b777jvivrusqo" path="res://Sprites/FeedbackLoop-Button.png" id="2_vxja4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mqyig"]
 size = Vector2(32, 3.9375)
 
 [node name="Button" type="Node2D"]
 z_index = 1
-script = ExtResource("1_js00g")
+script = ExtResource("1_n4tde")
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
@@ -28,5 +28,5 @@ polygon = PackedVector2Array(25, 0, -25, 0, -16, -5, 16, -5)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -4)
-texture = ExtResource("2_5rgrt")
+texture = ExtResource("2_vxja4")
 hframes = 2

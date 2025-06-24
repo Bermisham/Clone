@@ -1,17 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://crfhb0jbbqc78"]
+[gd_scene load_steps=4 format=3 uid="uid://ba2dwutqh30vy"]
 
-[ext_resource type="Script" uid="uid://c05ltwy7i1jks" path="res://Scripts/SceneHandlers/SceneHandler.gd" id="1_5ydjq"]
-[ext_resource type="Script" uid="uid://djv0qkppmx3qd" path="res://Scripts/SceneHandlers/ModeHandler.gd" id="2_781tb"]
-[ext_resource type="Script" uid="uid://cpk0kg37ljpjd" path="res://Scripts/SceneHandlers/InputSaveHandler.gd" id="3_64vys"]
+[ext_resource type="Script" uid="uid://c05ltwy7i1jks" path="res://Scripts/SceneHandlers/SceneHandler.gd" id="1_0r7jj"]
+[ext_resource type="Script" uid="uid://djv0qkppmx3qd" path="res://Scripts/SceneHandlers/ModeHandler.gd" id="2_46ojh"]
+[ext_resource type="Script" uid="uid://cpk0kg37ljpjd" path="res://Scripts/SceneHandlers/InputSaveHandler.gd" id="3_42far"]
 
 [node name="SceneHandlers" type="Node"]
-script = ExtResource("1_5ydjq")
+script = ExtResource("1_0r7jj")
 
 [node name="Mode" type="Node" parent="."]
-script = ExtResource("2_781tb")
+script = ExtResource("2_46ojh")
 
 [node name="InputSave" type="Node" parent="."]
-script = ExtResource("3_64vys")
-amtSaves = 3
-
-[connection signal="mode_change" from="Mode" to="." method="_on_mode_change"]
+script = ExtResource("3_42far")

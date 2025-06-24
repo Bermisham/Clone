@@ -6,11 +6,12 @@ enum State {PAUSED, RECORDING, NORMAL}
 var currentState : State = State.NORMAL
 var lastState : State = State.NORMAL
 
-@export var amtSaves : int = 1
+var amtSaves : int
 var inputSaves : Array = []
 var currentSave : int = 0
 
 func _ready() -> void:
+	amtSaves = get_parent().amtSaves
 	SetSaveAmount(amtSaves)
 	
 	# Pause Handling

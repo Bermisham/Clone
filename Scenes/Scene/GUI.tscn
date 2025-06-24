@@ -1,12 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://ckhonoru1lr30"]
+[gd_scene load_steps=8 format=3 uid="uid://c0iwp6xvx5bip"]
 
-[ext_resource type="Script" uid="uid://ccbhuab2udoxi" path="res://Scripts/GUI/GUIHandler.gd" id="1_bpa6r"]
-[ext_resource type="Script" uid="uid://bnhepvigy3lgy" path="res://Scripts/GUI/HUDHandler.gd" id="2_amv3e"]
-[ext_resource type="FontFile" uid="uid://b3qdsvlys0nie" path="res://Font/Hack/HackNerdFont-Bold.ttf" id="3_mggr0"]
-[ext_resource type="Script" uid="uid://du6r84g6vxhun" path="res://Scripts/GUI/PauseMenu.gd" id="3_xt740"]
-[ext_resource type="Script" uid="uid://0p7a04xkgrni" path="res://Scripts/GUI/CompleteScreen.gd" id="4_eyhwi"]
-[ext_resource type="Theme" uid="uid://52q2djqhq2lm" path="res://btnTheme.tres" id="5_wcsj4"]
-[ext_resource type="FontFile" uid="uid://c6dqx0n3h2gdb" path="res://Font/Hack/HackNerdFont-Regular.ttf" id="7_5ke0w"]
+[ext_resource type="Script" uid="uid://ccbhuab2udoxi" path="res://Scripts/GUI/GUIHandler.gd" id="1_5ke0w"]
+[ext_resource type="Script" uid="uid://bnhepvigy3lgy" path="res://Scripts/GUI/HUDHandler.gd" id="2_iinx5"]
+[ext_resource type="FontFile" uid="uid://b3qdsvlys0nie" path="res://Font/Hack/HackNerdFont-Bold.ttf" id="3_3nb7r"]
+[ext_resource type="Script" uid="uid://du6r84g6vxhun" path="res://Scripts/GUI/PauseMenu.gd" id="4_3us7a"]
+[ext_resource type="Theme" uid="uid://52q2djqhq2lm" path="res://btnTheme.tres" id="5_80hh7"]
+[ext_resource type="Script" uid="uid://0p7a04xkgrni" path="res://Scripts/GUI/CompleteScreen.gd" id="6_j1i5n"]
+[ext_resource type="FontFile" uid="uid://c6dqx0n3h2gdb" path="res://Font/Hack/HackNerdFont-Regular.ttf" id="7_y67qu"]
 
 [node name="GUI" type="Control"]
 layout_mode = 3
@@ -17,7 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="InGameUI" type="CanvasLayer" parent="."]
-script = ExtResource("1_bpa6r")
+script = ExtResource("1_5ke0w")
 
 [node name="HUD" type="Control" parent="InGameUI"]
 layout_mode = 3
@@ -28,7 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("2_amv3e")
+script = ExtResource("2_iinx5")
 
 [node name="ColorRect" type="ColorRect" parent="InGameUI/HUD"]
 layout_mode = 0
@@ -49,7 +49,7 @@ grow_vertical = 2
 texture_filter = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_mggr0")
+theme_override_fonts/font = ExtResource("3_3nb7r")
 theme_override_font_sizes/font_size = 32
 text = "?"
 
@@ -61,7 +61,7 @@ offset_top = 11.0
 offset_right = 53.0
 offset_bottom = 34.0
 theme_override_colors/font_color = Color(0.796078, 0.65098, 0.968627, 1)
-theme_override_fonts/font = ExtResource("3_mggr0")
+theme_override_fonts/font = ExtResource("3_3nb7r")
 theme_override_font_sizes/font_size = 32
 text = "?"
 
@@ -73,7 +73,7 @@ offset_top = 988.0
 offset_right = 44.0
 offset_bottom = 1007.0
 theme_override_colors/font_color = Color(0.65098, 0.890196, 0.631373, 1)
-theme_override_fonts/font = ExtResource("3_mggr0")
+theme_override_fonts/font = ExtResource("3_3nb7r")
 theme_override_font_sizes/font_size = 24
 text = "?"
 
@@ -87,7 +87,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-script = ExtResource("3_xt740")
+script = ExtResource("4_3us7a")
 
 [node name="ColorRect" type="ColorRect" parent="InGameUI/PauseScreen"]
 layout_mode = 1
@@ -141,7 +141,7 @@ texture_filter = 1
 custom_minimum_size = Vector2(0, 170)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.796078, 0.65098, 0.968627, 1)
-theme_override_fonts/font = ExtResource("3_mggr0")
+theme_override_fonts/font = ExtResource("3_3nb7r")
 theme_override_font_sizes/font_size = 64
 text = "PAUSED"
 horizontal_alignment = 1
@@ -151,7 +151,7 @@ vertical_alignment = 1
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("5_wcsj4")
+theme = ExtResource("5_80hh7")
 theme_override_font_sizes/font_size = 32
 text = "Resume"
 flat = true
@@ -160,7 +160,7 @@ flat = true
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("5_wcsj4")
+theme = ExtResource("5_80hh7")
 theme_override_font_sizes/font_size = 32
 text = "Restart
 "
@@ -170,7 +170,7 @@ flat = true
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("5_wcsj4")
+theme = ExtResource("5_80hh7")
 theme_override_font_sizes/font_size = 32
 text = "Levels"
 flat = true
@@ -179,7 +179,7 @@ flat = true
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("5_wcsj4")
+theme = ExtResource("5_80hh7")
 theme_override_font_sizes/font_size = 32
 text = "Title"
 flat = true
@@ -188,7 +188,7 @@ flat = true
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("5_wcsj4")
+theme = ExtResource("5_80hh7")
 theme_override_font_sizes/font_size = 32
 text = "Quit"
 flat = true
@@ -201,7 +201,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("4_eyhwi")
+script = ExtResource("6_j1i5n")
 
 [node name="ColorRect" type="ColorRect" parent="InGameUI/CompleteScreen"]
 layout_mode = 1
@@ -252,10 +252,10 @@ layout_mode = 2
 
 [node name="Complete" type="Label" parent="InGameUI/CompleteScreen/CenterContainer/Border/CenterContainer/ColorRect2/CenterContainer/VBoxContainer"]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 85)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.796078, 0.65098, 0.968627, 1)
-theme_override_fonts/font = ExtResource("3_mggr0")
+theme_override_fonts/font = ExtResource("3_3nb7r")
 theme_override_font_sizes/font_size = 64
 text = "COMPLETE"
 horizontal_alignment = 1
@@ -263,12 +263,22 @@ vertical_alignment = 1
 
 [node name="Time" type="Label" parent="InGameUI/CompleteScreen/CenterContainer/Border/CenterContainer/ColorRect2/CenterContainer/VBoxContainer"]
 texture_filter = 1
-custom_minimum_size = Vector2(0, 70)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.65098, 0.890196, 0.631373, 1)
-theme_override_fonts/font = ExtResource("7_5ke0w")
+theme_override_fonts/font = ExtResource("7_y67qu")
 theme_override_font_sizes/font_size = 32
 text = "Time [00:00]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Clones" type="Label" parent="InGameUI/CompleteScreen/CenterContainer/Border/CenterContainer/ColorRect2/CenterContainer/VBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65098, 0.890196, 0.631373, 1)
+theme_override_fonts/font = ExtResource("7_y67qu")
+theme_override_font_sizes/font_size = 32
+text = "Clones [0]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -276,7 +286,7 @@ vertical_alignment = 1
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("5_wcsj4")
+theme = ExtResource("5_80hh7")
 theme_override_font_sizes/font_size = 32
 text = "Next Level"
 flat = true
@@ -285,7 +295,7 @@ flat = true
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("5_wcsj4")
+theme = ExtResource("5_80hh7")
 theme_override_font_sizes/font_size = 32
 text = "Retry"
 flat = true
@@ -294,7 +304,7 @@ flat = true
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("5_wcsj4")
+theme = ExtResource("5_80hh7")
 theme_override_font_sizes/font_size = 32
 text = "Levels"
 flat = true
@@ -303,7 +313,7 @@ flat = true
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("5_wcsj4")
+theme = ExtResource("5_80hh7")
 theme_override_font_sizes/font_size = 32
 text = "Title"
 flat = true
@@ -312,7 +322,7 @@ flat = true
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 4
-theme = ExtResource("5_wcsj4")
+theme = ExtResource("5_80hh7")
 theme_override_font_sizes/font_size = 32
 text = "Quit"
 flat = true

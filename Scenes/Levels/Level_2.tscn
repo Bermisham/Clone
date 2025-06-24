@@ -1,64 +1,66 @@
-[gd_scene load_steps=10 format=4 uid="uid://cx40v35o1l7wq"]
+[gd_scene load_steps=10 format=4 uid="uid://cab30wmna3tyr"]
 
-[ext_resource type="PackedScene" uid="uid://daur6xegtjl43" path="res://Scenes/Scene/background_tile_map.tscn" id="1_axppo"]
-[ext_resource type="PackedScene" uid="uid://b7ig70b5bsf7l" path="res://Scenes/Scene/camera.tscn" id="2_dafx8"]
-[ext_resource type="PackedScene" uid="uid://u4x060odkhk8" path="res://Scenes/Scene/clone_position.tscn" id="3_inorh"]
-[ext_resource type="PackedScene" uid="uid://ckhonoru1lr30" path="res://Scenes/Scene/GUI.tscn" id="4_oxtd8"]
-[ext_resource type="PackedScene" uid="uid://crfhb0jbbqc78" path="res://Scenes/Scene/scene_handlers.tscn" id="5_luow5"]
-[ext_resource type="PackedScene" uid="uid://cpdko5gvtch4p" path="res://Scenes/Scene/Player.tscn" id="6_ck0i2"]
-[ext_resource type="PackedScene" uid="uid://cqn28ykru3kq8" path="res://Scenes/Scene/Exit.tscn" id="7_cexhq"]
-[ext_resource type="PackedScene" uid="uid://dnvldkmar2hkh" path="res://Scenes/Instances/Door.tscn" id="8_inorh"]
-[ext_resource type="PackedScene" uid="uid://bkq61amvbtco8" path="res://Scenes/Instances/button.tscn" id="9_oxtd8"]
+[ext_resource type="PackedScene" uid="uid://b453hr44f3f37" path="res://Scenes/Scene/background_tile_map.tscn" id="1_oyhbj"]
+[ext_resource type="PackedScene" uid="uid://cbib4xli1dala" path="res://Scenes/Scene/camera.tscn" id="2_lgjvw"]
+[ext_resource type="PackedScene" uid="uid://ymshombmf2s5" path="res://Scenes/Scene/clone_position.tscn" id="3_n8hyc"]
+[ext_resource type="PackedScene" uid="uid://c0iwp6xvx5bip" path="res://Scenes/Scene/GUI.tscn" id="4_eiivm"]
+[ext_resource type="PackedScene" uid="uid://ba2dwutqh30vy" path="res://Scenes/Scene/scene_handlers.tscn" id="5_p4ecc"]
+[ext_resource type="PackedScene" uid="uid://cb2ns8audy0bg" path="res://Scenes/Scene/Player.tscn" id="6_4x2ic"]
+[ext_resource type="PackedScene" uid="uid://d3axy3dkpicg4" path="res://Scenes/Scene/Exit.tscn" id="7_576va"]
+[ext_resource type="PackedScene" uid="uid://x5e6viek18gr" path="res://Scenes/Instances/Door.tscn" id="8_0eu5p"]
+[ext_resource type="PackedScene" uid="uid://dm5qf2k4xulbx" path="res://Scenes/Instances/button.tscn" id="9_fy7lv"]
 
 [node name="Level2" type="Node2D"]
 
-[node name="BackgroundTileMap" parent="." instance=ExtResource("1_axppo")]
+[node name="BackgroundTileMap" parent="." instance=ExtResource("1_oyhbj")]
 tile_map_data = PackedByteArray("AAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAD+//7/AAABAAMAAAD+////AAABAAMAAAD+/wAAAAABAAMAAAD///7/AAABAAMAAAD/////AAABAAMAAAD//wAAAAABAAMAAAAAAP7/AAABAAMAAAAAAP//AAABAAMAAAAAAAAAAAABAAMAAAABAP7/AAABAAMAAAABAP//AAABAAMAAAABAAAAAAABAAMAAAACAP7/AAABAAMAAAACAP//AAABAAMAAAACAAAAAAABAAMAAAD9/wEAAAACAAEAAAD9//7/AAABAAAAAAD9////AAABAAAAAAD9/wAAAAABAAAAAAD9//3/AAACAAAAAAD+//3/AAABAAEAAAD///3/AAABAAEAAAAAAP3/AAABAAEAAAABAP3/AAABAAEAAAACAP3/AAABAAEAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAADAP3/AAABAAEAAAAEAP3/AAABAAEAAAAFAP3/AAABAAEAAAAGAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAAAAAAGAP3/AAABAAEAAAAHAP3/AAABAAEAAAAIAP3/AAABAAEAAAAJAP3/AAABAAEAAAADAP7/AAABAAMAAAADAP//AAABAAMAAAADAAAAAAABAAMAAAAEAP7/AAABAAMAAAAEAP//AAABAAMAAAAEAAAAAAABAAMAAAAFAP7/AAABAAMAAAAFAP//AAABAAMAAAAFAAAAAAABAAMAAAAGAP7/AAABAAMAAAAGAP//AAABAAMAAAAGAAAAAAABAAMAAAAHAP7/AAABAAMAAAAHAP//AAABAAMAAAAHAAAAAAABAAMAAAAIAP7/AAABAAMAAAAIAP//AAABAAMAAAAIAAAAAAABAAMAAAAJAP7/AAABAAMAAAAJAP//AAABAAMAAAAJAAAAAAABAAMAAAAKAAEAAAAAAAAAAAALAAEAAAAAAAAAAAAKAP3/AAABAAEAAAALAP3/AAADAAMAAAAKAP7/AAABAAMAAAAKAP//AAABAAMAAAAKAAAAAAABAAMAAAALAP7/AAABAAMAAAALAP//AAABAAMAAAALAAAAAAABAAMAAAAMAAEAAAAAAAAAAAANAAEAAAAAAAAAAAAOAAEAAAAAAAAAAAAPAAEAAAADAAEAAAARAAEAAAACAAEAAAASAAEAAAAAAAAAAAATAAEAAAAAAAAAAAAUAAEAAAAAAAAAAAAVAAEAAAAAAAAAAAAPAAAAAAAAAAEAAAAPAP//AAAAAAEAAAAPAP7/AAACAAIAAAARAP7/AAADAAIAAAAQAP7/AAAAAAAAAAARAP//AAABAAAAAAARAAAAAAABAAAAAAALAPz/AAADAAIAAAAGAPz/AAAAAAAAAAAHAPz/AAAAAAAAAAAIAPz/AAAAAAAAAAAJAPz/AAAAAAAAAAAKAPz/AAAAAAAAAAAFAPz/AAACAAEAAAAFAPv/AAABAAAAAAAFAPr/AAABAAAAAAAFAPn/AAABAAAAAAAFAPj/AAACAAAAAAAGAPj/AAABAAEAAAAHAPj/AAABAAEAAAAIAPj/AAABAAEAAAAJAPj/AAABAAEAAAAKAPj/AAABAAEAAAALAPj/AAABAAEAAAAMAPj/AAABAAEAAAANAPj/AAABAAEAAAAOAPj/AAABAAEAAAAPAPj/AAABAAEAAAAQAPj/AAABAAEAAAARAPj/AAABAAEAAAASAPj/AAABAAEAAAATAPj/AAABAAEAAAAUAPj/AAABAAEAAAAMAP7/AAABAAMAAAAMAP//AAABAAMAAAAMAAAAAAABAAMAAAANAP7/AAABAAMAAAANAP//AAABAAMAAAANAAAAAAABAAMAAAAOAP7/AAABAAMAAAAOAP//AAABAAMAAAAOAAAAAAABAAMAAAAMAPn/AAABAAMAAAAMAPr/AAABAAMAAAAMAPv/AAABAAMAAAAMAPz/AAABAAMAAAAMAP3/AAABAAMAAAANAPn/AAABAAMAAAANAPr/AAABAAMAAAANAPv/AAABAAMAAAANAPz/AAABAAMAAAANAP3/AAABAAMAAAAOAPn/AAABAAMAAAAOAPr/AAABAAMAAAAOAPv/AAABAAMAAAAOAPz/AAABAAMAAAAOAP3/AAABAAMAAAAGAPn/AAABAAMAAAAGAPr/AAABAAMAAAAGAPv/AAABAAMAAAAHAPn/AAABAAMAAAAHAPr/AAABAAMAAAAHAPv/AAABAAMAAAAIAPn/AAABAAMAAAAIAPr/AAABAAMAAAAIAPv/AAABAAMAAAAJAPn/AAABAAMAAAAJAPr/AAABAAMAAAAJAPv/AAABAAMAAAAKAPn/AAABAAMAAAAKAPr/AAABAAMAAAAKAPv/AAABAAMAAAALAPn/AAABAAMAAAALAPr/AAABAAMAAAALAPv/AAABAAMAAAAPAPn/AAABAAMAAAAPAPr/AAABAAMAAAAPAPv/AAABAAMAAAAPAPz/AAABAAMAAAAPAP3/AAABAAMAAAAQAPn/AAABAAMAAAAQAPr/AAABAAMAAAAQAPv/AAABAAMAAAAQAPz/AAABAAMAAAAQAP3/AAABAAMAAAARAPn/AAABAAMAAAARAPr/AAABAAMAAAARAPv/AAABAAMAAAARAPz/AAABAAMAAAARAP3/AAABAAMAAAASAPn/AAABAAMAAAASAPr/AAABAAMAAAASAPv/AAABAAMAAAASAPz/AAABAAMAAAASAP3/AAABAAMAAAASAP7/AAABAAMAAAASAP//AAABAAMAAAASAAAAAAABAAMAAAATAPn/AAABAAMAAAATAPr/AAABAAMAAAATAPv/AAABAAMAAAATAPz/AAABAAMAAAATAP3/AAABAAMAAAATAP7/AAABAAMAAAATAP//AAABAAMAAAATAAAAAAABAAMAAAAUAPn/AAABAAMAAAAUAPr/AAABAAMAAAAUAPv/AAABAAMAAAAUAPz/AAABAAMAAAAUAP3/AAABAAMAAAAUAP7/AAABAAMAAAAUAP//AAABAAMAAAAUAAAAAAABAAMAAAAVAPj/AAADAAAAAAAVAPn/AAAAAAEAAAAVAPr/AAAAAAEAAAAVAPv/AAAAAAEAAAAVAPz/AAAAAAEAAAAVAP3/AAACAAMAAAAVAP7/AAABAAMAAAAVAP//AAABAAMAAAAVAAAAAAABAAMAAAAWAP7/AAABAAMAAAAWAP//AAABAAMAAAAWAAAAAAABAAMAAAAXAP7/AAABAAMAAAAXAP//AAABAAMAAAAXAAAAAAABAAMAAAAYAP7/AAABAAMAAAAYAP//AAABAAMAAAAYAAAAAAABAAMAAAAZAP7/AAABAAMAAAAZAP//AAABAAMAAAAZAAAAAAABAAMAAAAaAP7/AAABAAMAAAAaAP//AAABAAMAAAAaAAAAAAABAAMAAAAWAAEAAAAAAAAAAAAXAAEAAAAAAAAAAAAYAAEAAAAAAAAAAAAZAAEAAAAAAAAAAAAaAAEAAAAAAAAAAAAWAP3/AAABAAEAAAAXAP3/AAABAAEAAAAYAP3/AAABAAEAAAAZAP3/AAABAAEAAAAaAP3/AAABAAEAAAAbAAEAAAAAAAAAAAAcAAEAAAAAAAAAAAAWAPz/AAACAAEAAAAWAPn/AAABAAAAAAAWAPr/AAABAAAAAAAWAPv/AAABAAAAAAAWAPj/AAACAAAAAAAXAPj/AAABAAEAAAAYAPj/AAABAAEAAAAZAPj/AAABAAEAAAAaAPj/AAABAAEAAAAbAPj/AAABAAEAAAAcAPj/AAABAAEAAAAdAPj/AAABAAEAAAAbAP3/AAABAAEAAAAcAP3/AAADAAMAAAAcAPz/AAADAAIAAAAXAPz/AAAAAAAAAAAYAPz/AAAAAAAAAAAZAPz/AAAAAAAAAAAaAPz/AAAAAAAAAAAbAPz/AAAAAAAAAAAdAAEAAAAAAAAAAAAeAAEAAAAAAAAAAAAfAAEAAAADAAEAAAAfAP7/AAACAAIAAAAfAP//AAAAAAEAAAAfAAAAAAAAAAEAAAAfAP3/AAABAAMAAAAgAP3/AAABAAMAAAAhAP3/AAAAAAEAAAAhAPn/AAAAAAEAAAAhAPr/AAAAAAEAAAAhAPv/AAAAAAEAAAAhAPz/AAAAAAEAAAAhAPj/AAADAAAAAAAeAPj/AAABAAEAAAAfAPj/AAABAAEAAAAgAPj/AAABAAEAAAAbAP7/AAABAAMAAAAbAP//AAABAAMAAAAbAAAAAAABAAMAAAAcAP7/AAABAAMAAAAcAP//AAABAAMAAAAcAAAAAAABAAMAAAAdAP7/AAABAAMAAAAdAP//AAABAAMAAAAdAAAAAAABAAMAAAAeAP7/AAABAAMAAAAeAP//AAABAAMAAAAeAAAAAAABAAMAAAAdAPn/AAABAAMAAAAdAPr/AAABAAMAAAAdAPv/AAABAAMAAAAdAPz/AAABAAMAAAAdAP3/AAABAAMAAAAeAPn/AAABAAMAAAAeAPr/AAABAAMAAAAeAPv/AAABAAMAAAAeAPz/AAABAAMAAAAeAP3/AAABAAMAAAAfAPn/AAABAAMAAAAfAPr/AAABAAMAAAAfAPv/AAABAAMAAAAfAPz/AAABAAMAAAAgAPn/AAABAAMAAAAgAPr/AAABAAMAAAAgAPv/AAABAAMAAAAgAPz/AAABAAMAAAAXAPn/AAABAAMAAAAXAPr/AAABAAMAAAAXAPv/AAABAAMAAAAYAPn/AAABAAMAAAAYAPr/AAABAAMAAAAYAPv/AAABAAMAAAAZAPn/AAABAAMAAAAZAPr/AAABAAMAAAAZAPv/AAABAAMAAAAaAPn/AAABAAMAAAAaAPr/AAABAAMAAAAaAPv/AAABAAMAAAAbAPn/AAABAAMAAAAbAPr/AAABAAMAAAAbAPv/AAABAAMAAAAcAPn/AAABAAMAAAAcAPr/AAABAAMAAAAcAPv/AAABAAMAAAAgAP7/AAAAAAAAAAAhAP7/AAADAAEAAAA=")
 
-[node name="Camera2D" parent="." instance=ExtResource("2_dafx8")]
-
-[node name="CloneNode" parent="." instance=ExtResource("3_inorh")]
-
-[node name="GUI" parent="." instance=ExtResource("4_oxtd8")]
-
-[node name="SceneHandlers" parent="." instance=ExtResource("5_luow5")]
-
-[node name="Player" parent="." instance=ExtResource("6_ck0i2")]
+[node name="Camera2D" parent="." instance=ExtResource("2_lgjvw")]
 position = Vector2(16, 16)
 
-[node name="Exit" parent="." instance=ExtResource("7_cexhq")]
+[node name="CloneNode" parent="." instance=ExtResource("3_n8hyc")]
+
+[node name="GUI" parent="." instance=ExtResource("4_eiivm")]
+
+[node name="SceneHandlers" parent="." instance=ExtResource("5_p4ecc")]
+amtSaves = 2
+
+[node name="Player" parent="." instance=ExtResource("6_4x2ic")]
+position = Vector2(16, 16)
+
+[node name="Exit" parent="." instance=ExtResource("7_576va")]
 position = Vector2(257, -128)
 locked = true
 
-[node name="Door" parent="." instance=ExtResource("8_inorh")]
+[node name="Door" parent="." instance=ExtResource("8_0eu5p")]
 position = Vector2(250, 32)
 length = 3
 
-[node name="Button" parent="." node_paths=PackedStringArray("connections") instance=ExtResource("9_oxtd8")]
+[node name="Button" parent="." node_paths=PackedStringArray("connections") instance=ExtResource("9_fy7lv")]
 position = Vector2(167, 32)
 connections = [NodePath("../Door")]
 
-[node name="Button2" parent="." node_paths=PackedStringArray("connections") instance=ExtResource("9_oxtd8")]
+[node name="Button2" parent="." node_paths=PackedStringArray("connections") instance=ExtResource("9_fy7lv")]
 position = Vector2(528, -64)
 connections = [NodePath("../Exit")]
 
-[node name="Door2" parent="." instance=ExtResource("8_inorh")]
+[node name="Door2" parent="." instance=ExtResource("8_0eu5p")]
 position = Vector2(327, -128)
 length = 3
 
-[node name="Door3" parent="." instance=ExtResource("8_inorh")]
+[node name="Door3" parent="." instance=ExtResource("8_0eu5p")]
 position = Vector2(704, 32)
 locked = false
 length = 3
 
-[node name="Door4" parent="." instance=ExtResource("8_inorh")]
+[node name="Door4" parent="." instance=ExtResource("8_0eu5p")]
 position = Vector2(864, 32)
 length = 3
 
-[node name="Button3" parent="." node_paths=PackedStringArray("connections") instance=ExtResource("9_oxtd8")]
+[node name="Button3" parent="." node_paths=PackedStringArray("connections") instance=ExtResource("9_fy7lv")]
 position = Vector2(784, 32)
 connections = [NodePath("../Door3"), NodePath("../Door4")]
 
-[node name="Button4" parent="." node_paths=PackedStringArray("connections") instance=ExtResource("9_oxtd8")]
+[node name="Button4" parent="." node_paths=PackedStringArray("connections") instance=ExtResource("9_fy7lv")]
 position = Vector2(784, -128)
 connections = [NodePath("../Door2")]

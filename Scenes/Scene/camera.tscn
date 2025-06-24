@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b7ig70b5bsf7l"]
+[gd_scene load_steps=2 format=3 uid="uid://cbib4xli1dala"]
 
-[ext_resource type="Script" uid="uid://cxcjuuqxw2l0n" path="res://Scripts/CameraHandler.gd" id="1_375tr"]
+[ext_resource type="Script" uid="uid://cxcjuuqxw2l0n" path="res://Scripts/CameraHandler.gd" id="1_0njfy"]
 
 [node name="Camera2D" type="Camera2D"]
-zoom = Vector2(1.5, 1.5)
-script = ExtResource("1_375tr")
+zoom = Vector2(2.5, 2.5)
+script = ExtResource("1_0njfy")
 smoothing = true
+smoothing_dist = 1

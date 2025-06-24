@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsyjwpt4s5ow6"]
+[gd_scene load_steps=4 format=3 uid="uid://0v2k6ktxc8i4"]
 
-[ext_resource type="Script" uid="uid://qs88qyjebnlf" path="res://Scripts/GUI/EndScreen.gd" id="1_g1lhe"]
-[ext_resource type="FontFile" uid="uid://b3qdsvlys0nie" path="res://Font/Hack/HackNerdFont-Bold.ttf" id="2_uu60e"]
-[ext_resource type="Theme" uid="uid://52q2djqhq2lm" path="res://btnTheme.tres" id="2_xfuas"]
+[ext_resource type="Script" uid="uid://qs88qyjebnlf" path="res://Scripts/GUI/EndScreen.gd" id="1_lmk8k"]
+[ext_resource type="FontFile" uid="uid://b3qdsvlys0nie" path="res://Font/Hack/HackNerdFont-Bold.ttf" id="2_3w1jx"]
+[ext_resource type="Theme" uid="uid://52q2djqhq2lm" path="res://btnTheme.tres" id="3_e6a7n"]
 
 [node name="EndScreen" type="Control"]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_g1lhe")
+script = ExtResource("1_lmk8k")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -38,7 +38,7 @@ texture_filter = 1
 custom_minimum_size = Vector2(0, 250)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.796078, 0.65098, 0.968627, 1)
-theme_override_fonts/font = ExtResource("2_uu60e")
+theme_override_fonts/font = ExtResource("2_3w1jx")
 theme_override_font_sizes/font_size = 128
 text = "End"
 horizontal_alignment = 1
@@ -47,7 +47,7 @@ vertical_alignment = 1
 [node name="TitleButton" type="Button" parent="CenterContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("2_xfuas")
+theme = ExtResource("3_e6a7n")
 theme_override_font_sizes/font_size = 32
 text = "Title"
 flat = true
@@ -55,7 +55,7 @@ flat = true
 [node name="LevelsButton" type="Button" parent="CenterContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("2_xfuas")
+theme = ExtResource("3_e6a7n")
 theme_override_font_sizes/font_size = 32
 text = "Levels
 "
@@ -64,7 +64,7 @@ flat = true
 [node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-theme = ExtResource("2_xfuas")
+theme = ExtResource("3_e6a7n")
 theme_override_font_sizes/font_size = 32
 text = "Quit
 "

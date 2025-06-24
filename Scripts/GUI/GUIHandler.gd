@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var pause_screen: Control = $PauseScreen
 @onready var complete_screen: Control = $CompleteScreen
 @onready var time: Label = $CompleteScreen/CenterContainer/Border/CenterContainer/ColorRect2/CenterContainer/VBoxContainer/Time
+@onready var clones: Label = $CompleteScreen/CenterContainer/Border/CenterContainer/ColorRect2/CenterContainer/VBoxContainer/Clones
 @onready var timer: Label = $HUD/Timer
 
 var paused := false
@@ -39,6 +40,7 @@ func _pause(state : bool) -> void:
 
 func _SceneComplete() -> void:
 	time.text = "Time [" + str("%0.2f" % gameTime) + "]"
+	clones.text = "Clones [" + str(GlobalHandler.sceneHandler.amtClones) + "]"
 	sceneComplete = true
 	complete_screen.show()
 	GlobalHandler.ChangePause(true)

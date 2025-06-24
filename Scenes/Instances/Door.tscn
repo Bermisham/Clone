@@ -1,12 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://dnvldkmar2hkh"]
+[gd_scene load_steps=3 format=3 uid="uid://x5e6viek18gr"]
 
-[ext_resource type="Script" uid="uid://bhauxaj8sam22" path="res://Scripts/Objects/Door.gd" id="1_562ge"]
+[ext_resource type="Script" uid="uid://bhauxaj8sam22" path="res://Scripts/Objects/Door.gd" id="1_1vvux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_562ge"]
 size = Vector2(16, 16)
 
 [node name="Door" type="Node2D"]
-script = ExtResource("1_562ge")
+script = ExtResource("1_1vvux")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 3

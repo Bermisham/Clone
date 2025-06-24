@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cx4a737jq88mw"]
+[gd_scene load_steps=4 format=3 uid="uid://6v487ic0xfu1"]
 
-[ext_resource type="Script" uid="uid://cgx6kqfcvsu8r" path="res://Scripts/GUI/LevelSelect.gd" id="1_4o7q4"]
-[ext_resource type="Theme" uid="uid://52q2djqhq2lm" path="res://btnTheme.tres" id="2_ly1v0"]
-[ext_resource type="FontFile" uid="uid://b3qdsvlys0nie" path="res://Font/Hack/HackNerdFont-Bold.ttf" id="3_to7mc"]
+[ext_resource type="Script" uid="uid://cgx6kqfcvsu8r" path="res://Scripts/GUI/LevelSelect.gd" id="1_q3t17"]
+[ext_resource type="Theme" uid="uid://52q2djqhq2lm" path="res://btnTheme.tres" id="2_0bmyu"]
+[ext_resource type="FontFile" uid="uid://b3qdsvlys0nie" path="res://Font/Hack/HackNerdFont-Bold.ttf" id="3_nb57j"]
 
 [node name="LevelSelect" type="Control"]
 layout_mode = 3
@@ -11,7 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_4o7q4")
+script = ExtResource("1_q3t17")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -31,7 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="LevelList"]
-custom_minimum_size = Vector2(600, 400)
+custom_minimum_size = Vector2(600, 600)
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="LevelList/ScrollContainer"]
@@ -45,9 +45,9 @@ offset_left = 17.0
 offset_top = 16.0
 offset_right = 106.0
 offset_bottom = 69.0
-theme = ExtResource("2_ly1v0")
-theme_override_fonts/font = ExtResource("3_to7mc")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("2_0bmyu")
+theme_override_fonts/font = ExtResource("3_nb57j")
+theme_override_font_sizes/font_size = 64
 text = "Title"
 flat = true
 

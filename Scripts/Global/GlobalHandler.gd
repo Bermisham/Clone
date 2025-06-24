@@ -12,6 +12,9 @@ var levels = [
 	"res://Scenes/Levels/Level_2.tscn",
 	"res://Scenes/Levels/Level_3.tscn",
 	"res://Scenes/Levels/Level_4.tscn",
+	"res://Scenes/Levels/Level_5.tscn",
+	"res://Scenes/Levels/Level_6.tscn",
+	"res://Scenes/Levels/Level_7.tscn",
 ]
 
 func SetSceneHandler(handler : Node) -> void:

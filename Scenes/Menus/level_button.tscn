@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dqbkybwlsbsky"]
+[gd_scene load_steps=3 format=3 uid="uid://dajkyta2s3clu"]
 
-[ext_resource type="Script" uid="uid://bs7bdphm66q0f" path="res://Scripts/GUI/LevelButton.gd" id="1_miuhf"]
-[ext_resource type="Theme" uid="uid://52q2djqhq2lm" path="res://btnTheme.tres" id="1_olu6l"]
+[ext_resource type="Theme" uid="uid://52q2djqhq2lm" path="res://btnTheme.tres" id="1_j8bpn"]
+[ext_resource type="Script" uid="uid://bs7bdphm66q0f" path="res://Scripts/GUI/LevelButton.gd" id="2_shs6u"]
 
 [node name="LevelButton" type="Button"]
 texture_filter = 1
@@ -12,8 +12,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 6
-theme = ExtResource("1_olu6l")
-theme_override_font_sizes/font_size = 32
+theme = ExtResource("1_j8bpn")
+theme_override_font_sizes/font_size = 48
 text = "NAME"
 flat = true
-script = ExtResource("1_miuhf")
+script = ExtResource("2_shs6u")
